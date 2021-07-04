@@ -13,6 +13,8 @@ metar_map = {}
 for td in metar_soup:
     metar = " ".join(td.get_text().strip().split())
     airport = metar.split(" ")[1]
+    if airport == 'COR':
+        airport = metar.split(" ")[2]
     metar_map[airport] = {'metar': metar, 'runway': []}
 
 print(json.dumps(metar_map))
