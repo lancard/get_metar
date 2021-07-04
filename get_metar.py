@@ -6,7 +6,7 @@ url = "https://global.amo.go.kr/obsMetar/SearchObsMetarList.do?tm=9999.12.31%202
 
 html = requests.get(url).text
 soup = BeautifulSoup(html, 'html.parser')
-metar_soup = soup.select("#contentsTb tbody td:-soup-contains(METAR)")
+metar_soup = soup.select("#contentsTb tbody td:-soup-contains(METAR),td:-soup-contains(SPECI)")
 
 metar_map = {}
 
