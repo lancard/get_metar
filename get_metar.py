@@ -15,4 +15,4 @@ for td in metar_soup:
     airport = metar.split(" ")[1]
     metar_map[airport] = {'metar': metar, 'runway': []}
 
-print(metar_map)
+print(json.dumps(metar_map))
