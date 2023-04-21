@@ -17,6 +17,6 @@ for td in metar_soup:
     if airport == 'COR':
         airport = metar.split(" ")[2]
     if 'RK' in airport:
-        metar_map[airport] = {'metar': metar, 'runway': []}
+        metar_map[airport] = metar
 
 print(json.dumps(metar_map))
