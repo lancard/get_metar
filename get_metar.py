@@ -3,7 +3,7 @@ import time
 import json
 from bs4 import BeautifulSoup
 
-url = "https://global.amo.go.kr/obsMetar/SearchObsMetarList.do?tm=9999.12.31%2023:59"
+url = "http://global.amo.go.kr/obsMetar/SearchObsMetarList.do?tm=9999.12.31%2023:59"
 
 html = requests.get(url).text
 soup = BeautifulSoup(html, 'html.parser')
